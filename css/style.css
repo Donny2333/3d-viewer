@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑";
+    font-size: 18px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/******************* head ********************/
+
+.head {
+    display: flex;
+    align-items: center;
+    min-width: 1200px;
+    width: 100%;
+    height: 60px;
+    background-image: url("../images/head.png");
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu > li {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 18px;
+    color: white;
+    font-weight: lighter;
+    border-right: 1px solid black;
+}
+
+.menu > li:last-child {
+    border: none;
+}
+
+.lon-input,
+.lat-input {
+    display: flex;
+    align-items: center;
+}
+
+.lon-input > input,
+.lat-input > input {
+    width: 110px;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    background-color: #11497f;
+    color: white;
+    padding-left: 10px;
+}
+
+.lat-input {
+    margin-left: 30px;
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.btn:active,
+.btn:focus {
+    top: 1px;
+    left: 1px;
+}
+
+.btn-locate {
+    margin-left: 20px;
+    width: 60px;
+    height: 30px;
+    border-radius: 2px;
+    background-image: url("../images/locate.png");
+}
+
+.btn-cal {
+    height: 30px;
+    width: 30px;
+    background: url("../images/cal.png");
+    border: none;
+}
+
+.btn-clear {
+    height: 30px;
+    width: 30px;
+    background: url("../images/clear.png");
+    border: none;
+    outline: none;
+    margin-left: 20px;
+}
+
+.btn-attr {
+    height: 20px;
+    width: 20px;
+    background: url("../images/attr.png") no-repeat;
+}
+
+.btn-coord {
+    height: 25px;
+    width: 25px;
+    background: url("../images/coord.png") no-repeat;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+.btn-setting {
+    height: 20px;
+    width: 20px;
+    background: url("../images/setting.png") no-repeat;
+    margin-left: 20px;
+}
+
+/******************* main ********************/
+
+.main {
+    flex: auto;
+    position: relative;
+    align-items: center;
+}
+
+.main-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.left {
+    flex: auto;
+    border-right: 1px solid gray;
+}
+
+.right {
+    width: 400px;
+}

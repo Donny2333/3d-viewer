@@ -1,0 +1,15 @@
+{
+  "name": "3d-viewer",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donny",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
