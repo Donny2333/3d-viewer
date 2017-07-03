@@ -18,6 +18,99 @@ body {
     width: 100%;
 }
 
+/******************* slider bar ********************/
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    /*fix for FF unable to apply focus style bug */
+    /*border: 1px solid white;*/
+    /*required for proper track sizing in FF*/
+    width: 150px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 150px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-image: -webkit-linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(139, 139, 139) 100%);
+    margin-top: -6px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 150px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-image: -moz-linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(139, 139, 139) 100%);
+}
+
+/*hide the outline behind the border*/
+
+input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 150px;
+    height: 5px;
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+    /*remove default tick marks*/
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+    background-image: -ms-linear-gradient(90deg, rgb(120, 165, 240) 0%, rgb(59, 178, 228) 100%);
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+    background-image: -ms-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(141, 141, 141) 100%);
+}
+
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-image: -ms-linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(139, 139, 139) 100%);
+}
+
 /******************* head ********************/
 
 .head {
@@ -39,7 +132,7 @@ body {
     display: flex;
     align-items: center;
     height: 40px;
-    padding: 18px;
+    padding: 0 18px;
     color: white;
     font-weight: lighter;
     border-right: 1px solid black;
