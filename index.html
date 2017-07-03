@@ -4,7 +4,12 @@
 <head>
     <title>3d-viwer</title>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="bower_components/codemirror/theme/3024-day.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="bower_components/codemirror/lib/codemirror.js"></script>
 </head>
 
 <body>
@@ -40,9 +45,13 @@
 <div class="main">
     <div class="main-content">
         <div class="left"></div>
-        <div class="right"></div>
+        <div class="right">
+            <textarea id="code"></textarea>
+        </div>
     </div>
 </div>
+
+<script src="build/bundle.js"></script>
 </body>
 
 </html>
